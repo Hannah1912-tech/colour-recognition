@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Detection App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Color Detection App</h1>
+        
+        <div class="main-content">
+            <div class="video-container">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+            
+            <div class="controls">
+                <div class="color-info">
+                    <h2>Detected Color</h2>
+                    <div id="color_name">Click on video to detect color</div>
+                    <div id="color_preview"></div>
+                </div>
+                <button id="clear_focus" class="button">Clear Focus</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
